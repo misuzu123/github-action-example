@@ -1,0 +1,42 @@
+databaseChangeLog:
+    - changeSet:
+          id: 5
+          author: duongdeptrai
+          changes:
+              - insert:
+                    tableName: customers
+                    columns:
+                        - column:
+                              name: full_name
+                              value: "Dương Đẹp Trai"
+                        - column:
+                              name: age
+                              value: 24
+                        - column:
+                              name: gender
+                              value: "Male"
+              - insert:
+                    tableName: customers
+                    columns:
+                        - column:
+                              name: full_name
+                              value: "Hòa Nữ Tính"
+                        - column:
+                              name: age
+                              value: 23
+                        - column:
+                              name: gender
+                              value: "Female"
+    - changeSet:
+          id: 6
+          author: duongdeptrai
+          changes:
+              - insert:
+                    tableName: users
+                    columns:
+                        - column:
+                              name: username
+                              value: duongdeptrai
+                        - column:
+                              name: password
+                              value: $2a$12$tG0xWOvUEUbYsToZDcR0m.b561NNb6TSBtEBPEEKA1bH1iCF6GCMG

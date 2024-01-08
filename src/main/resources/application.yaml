@@ -1,0 +1,31 @@
+server:
+    servlet:
+        context-path: '/api'
+    port: 9090
+
+icario:
+    training:
+        jwtExpirationMs: '28800000'
+        jwtSecret: 'XfCw2O2kNcEtZF5tnjr8TDAsNfODyXcBcPNPPE1giJU='
+
+swagger-ui:
+    server:
+        url: ${API-URL:http://localhost}:${PORT:9090}/api
+
+spring:
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_DATABASE:training-icario}
+        username: ${DB_USERNAME:postgres}
+        password: ${DB_PASSWORD:1}
+    jpa:
+        show-sql: true
+        properties:
+            hibernate:
+                globally_quoted_identifiers: true
+                format_sql: true
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+    liquibase:
+        change-log: classpath:db/changelog/db.changelog-master.yaml
+    kafka:
+        bootstrap-servers: ${KAFKA_URL:localhost}:${KAFKA_PORT:9092}
