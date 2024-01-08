@@ -144,3 +144,5 @@ k
 ;src/main/java/com/training/common/utils/KafkaListeners.java,8\a\8aa6fd9b7d58bd09c93712084e913dbcf174384b
 b
 2src/main/java/com/training/dto/kafka/Messages.java,2\f\2f0601d52bf9b9ff2e5c16b94f8824febbeb424d
+L
+.github/workflows/gradle.yml,c\3\c36c878e4a824e41b1b476ece36b9a80ca94ffec
