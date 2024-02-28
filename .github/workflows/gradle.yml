@@ -54,4 +54,4 @@ jobs:
     - name: SSH to EC2 and pull image
       run: |
           chmod 400 icario.pem
-          ssh -o StrictHostKeyChecking=no -i "icario.pem" ubuntu@ec2-3-87-65-7.compute-1.amazonaws.com "docker ps -a; aws ecr describe-images --repository-name github-action-demo; docker pull 321179548224.dkr.ecr.us-east-1.amazonaws.com/github-action-demo:latest; docker images"
+          ssh -o StrictHostKeyChecking=no -i "icario.pem" ubuntu@ec2-3-87-65-7.compute-1.amazonaws.com "aws_login_pass=$(aws ecr get-login-password --region us-east-1 --profile ci); docker pull 321179548224.dkr.ecr.us-east-1.amazonaws.com/github-action-demo:latest; docker images"
